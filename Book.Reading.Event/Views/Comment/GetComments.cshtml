@@ -1,0 +1,33 @@
+﻿@model IEnumerable<Book.Reading.Event.Models.CommentViewModel>
+@{
+    ViewData["Title"] = "FetchComment";
+}
+
+<table class="table">
+    <thead>
+        <tr>
+           
+            <th>
+                @Html.DisplayNameFor(model => model.comment)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.timestamp)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+               
+                <td>
+                    @Html.DisplayFor(modelItem => item.comment)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.timestamp)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,10 @@
+﻿@model Book.Reading.Event.Models.EventViewModel
+
+@if (Model.starttime < DateTime.Now)
+{
+     <partial name="_EventDetails" model="@Model" />
+}
+else
+{
+    <partial name="_EventDetails" model="@Model" />
+}
